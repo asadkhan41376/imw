@@ -1,0 +1,122 @@
+.nano-marquee-section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+
+    .mycustom-marque {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+}
+
+.nano-text-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: $header-color;
+    text-transform: capitalize;
+    text-decoration: underline;
+
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+
+.nano-counter-wrapper {
+	margin-top: 30px;
+
+	.nano-counter-image {
+		height: 500px;
+
+		img {
+			@include imgw;
+			object-fit: cover;
+		}
+	}
+
+	.nano-counter-box {
+		background-color: $theme-color;
+		padding: 30px;
+		width: 416px;
+	    height: 500px;
+
+		@include breakpoint (max-xl) {
+            width: initial;
+			height: initial;
+        }
+
+		.nano-counter-item {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+			padding-bottom: 15px;
+			margin-bottom: 10px;
+
+			&.nano-style-2 {
+				border-bottom: 1px none;
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+
+			h2 {
+				color: $bg-color;
+			}
+
+			p {
+				color: $white;
+				font-size: 24px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+
+.nano-feature-logo-wrapper {
+	position: relative;
+
+	.nano-right-content {
+		p {
+			max-width: 672px;
+			color: #333;
+			margin-bottom: 40px;
+
+			@include breakpoint (max-xl) {
+               font-size: 16px;
+          }
+
+		}
+
+		.nano-link-btn {
+			margin-bottom: 50px;
+		}
+
+		.feature-logo-item {
+			@include flex;
+			justify-content: space-between;
+
+			&.style-2 {
+				border-bottom: 1px solid rgba(51, 51, 51, 0.40);
+				padding-bottom: 40px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+
+	.nano-shape {
+		position: absolute;
+		top: 47%;
+        left: 40%;
+
+		@include breakpoint (max-xl) {
+            display: none;
+        }
+	}
+}
+
+
+.nano-barnd-images {
+    background: #F8F8F8;
+    width: 100%;
+    line-height: 240px;
+    line-height: 240px;
+    text-align: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,495 @@
+.nano-team-card-item {
+    margin-top: 30px;
+
+    .nano-team-image {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            @include before;
+            background: rgba(0, 0, 0, 0.60);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        img {
+            @include imgw;
+        }
+
+        .nano-social-icon {
+            display: grid;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: -100px;
+            top: 30px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+            a {
+                width: 44px;
+                height: 44px;
+                line-height: 44px;
+                text-align: center;
+                color: $header-color;
+                background-color: $white;
+                border-radius: 100%;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+
+        .nano-team-content {
+            position: absolute;
+            bottom: -30px;
+            left: 30px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+            h5 {
+                a {
+                    color: $white;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            p {
+                font-size: 18px;
+                color: $white;
+            }
+        }
+    }
+
+    &:hover {
+       .nano-team-image {
+
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nano-social-icon {
+            right: 30px;
+            opacity: 1;
+            visibility: visible;
+         }
+
+         .nano-team-content {
+             opacity: 1;
+             visibility: visible;
+             bottom: 30px;
+         }
+       } 
+    }
+
+    &.nano-style-2 {
+        .nano-team-image {
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+                @include before;
+                background: rgba(0, 0, 0, 0.80);
+            }
+
+            img {
+                @include imgw;
+            }
+
+            .nano-social-icon {
+                top: -100px;
+                left: 50%;
+                right: initial;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+                visibility: hidden;    
+                @include transition;
+                @include flex;
+            }
+
+            .nano-team-content {
+                left: 40px;
+                right: 40px;
+                text-align: center;
+            }
+       }
+
+       &:hover {
+          .nano-team-image {
+
+            .nano-social-icon {
+                top: 50%;
+                opacity: 1;
+                visibility: visible;
+            }
+          }
+       }
+    }
+}
+
+
+
+.nano-team-details-wrapper {
+
+    .nano-thumb {
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .nano-details-content {
+        margin-left: 80px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                margin-bottom: 0;
+            }
+        }
+
+        span {
+            font-size: 28px;
+            font-weight: 500;
+            color: $theme-color;
+            display: inline-block;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            color: $header-color;
+
+            @include breakpoint (max-xl) {
+                font-size: 16px;
+            }
+        }
+
+        .nano-list {
+            margin-top: 30px;
+
+            @include breakpoint (max-xl) {
+                margin-top: 10px;
+            }
+
+            li {
+                color: $header-color;
+                font-size: 18px;
+                font-weight: 400;
+
+                span {
+                    color: $header-color;
+                    margin-right: 5px;
+                    font-size: 20px;
+                    font-weight: 600;
+
+                    @include breakpoint (max-xl) {
+                      font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .nano-social-icon {
+            margin-top: 30px;
+            @include flex;
+            gap: 10px;
+
+            @include breakpoint (max-xl) {
+                margin-top: 20px;
+            }
+
+            a {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border: 1px solid rgba(51, 51, 51, 0.30);
+                display: inline-block;
+                border-radius: 100%;
+                text-align: center;
+                color: $header-color;
+                @include transition;
+
+                @include breakpoint (max-xl) {
+                   width: 50px;
+                   height: 50px;
+                   line-height: 50px;
+               }
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                    border: 1px solid $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.nano-team-skill-wrapper {
+
+    .nano-team-skill-content {
+        h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                font-size: 45px;
+            }
+
+            @include breakpoint (max-lg) {
+                font-size: 40px;
+            }
+
+            @include breakpoint (max-md) {
+                font-size: 35px;
+            }
+
+            @include breakpoint (max-sm) {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            @include breakpoint (max-xl) {
+                font-size: 16px;
+            }
+        }
+
+        .nano-counter-box {
+            background-color: $header-color;
+            padding: 50px 40px;
+            margin-top: 40px;
+            @include flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            @include breakpoint (max-md) {
+                font-size: 40px;
+            }
+
+            @include breakpoint (max-sm) {
+                padding: 30px;
+            }
+           
+		    .nano-counter-item {
+                text-align: center;
+
+                @include breakpoint (max-md) {
+                      text-align: left;
+                 }
+
+                h2 {
+                    color: $white;
+                    font-size: 60px;
+                    margin-bottom: 10px;
+
+                    @include breakpoint (max-xl) {
+                      font-size: 45px;
+                    }
+
+                    @include breakpoint (max-lg) {
+                        font-size: 40px;
+                    }
+
+                    @include breakpoint (max-md) {
+                        font-size: 35px;
+                    }
+
+                    @include breakpoint (max-sm) {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    color: $white;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+		    }
+	    }
+
+        .nano-progress-area {
+            @include flex;
+            gap: 30px;
+            margin-top: 30px;
+
+            @include breakpoint (max-xl) {
+                 flex-wrap: wrap;
+             }
+
+            .nano-progress-wrap {
+                width: 100%;
+
+                .pro-items {
+                    width: 100%;
+        
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                    .pro-head {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+        
+                        .title {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: $header-color;
+                        }
+                        
+                        .point {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: $header-color;
+                        }
+                    }
+                    .progress {
+                        background: rgba(127, 106, 255, 0.30);
+                        justify-content: flex-start;
+                        border-radius: 0px;
+                        align-items: center;
+                        position: relative;
+                        display: flex;
+                        height: 10px;
+                        width: 100%;
+                    }
+                    
+                    .progress-value {
+                        animation: load 3s normal forwards;
+                        border-radius: 0;
+                        background: $theme-color;
+                        height: 10px;
+                        width: 0;
+                    }
+                    .style-two{
+                        animation: load2 3s normal forwards;
+                    }
+                    .style-three{
+                        animation: load3 3s normal forwards;
+                    }
+                    @keyframes load {
+                        0% { width: 0; }
+                        100% { width: 90%; }
+                    }
+                    @keyframes load2 {
+                        0% { width: 0; }
+                        100% { width: 70%; }
+                    }
+                    @keyframes load3 {
+                        0% { width: 0; }
+                        100% { width: 55%; }
+                    }
+                }
+            }
+        }
+    }
+
+    .nano-conatct-box {
+        border: 1px solid rgba(51, 51, 51, 0.20);
+        background: $white;
+        padding: 60px 30px;
+        margin-left: 80px;
+
+        @include breakpoint (max-xl) {
+            margin-left: 0;
+        }
+
+         @include breakpoint (max-lg) {
+            padding: 50px 30px;
+        }
+
+         @include breakpoint (max-md) {
+           padding: 40px 30px;
+        }
+
+         @include breakpoint (max-sm) {
+            padding: 30px;
+        }
+
+        h2 {
+            font-size: 60px;
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                font-size: 45px;
+            }
+
+            @include breakpoint (max-lg) {
+                font-size: 40px;
+            }
+
+            @include breakpoint (max-md) {
+                font-size: 35px;
+            }
+
+            @include breakpoint (max-sm) {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            @include breakpoint (max-xl) {
+                font-size: 16px;
+            }
+        }
+
+        .form-clt {
+
+            input,textarea {
+                width: 100%;
+                outline: none;
+                border: none;
+                border: 1px solid rgba(51, 51, 51, 0.20);
+                background: $bg-color;
+                padding: 12px 20px;
+                font-weight: 400;
+                color: #333;
+                font-size: 20px;
+
+                &::placeholder {
+                    color: #333;
+                }
+            }
+
+            textarea {
+                padding-bottom: 150px;
+                resize: none;
+
+                @include breakpoint (max-sm) {
+                    padding-bottom: 100px;
+                }
+            }
+         } 
+
+         .theme-btn {
+            width: 100%;
+         }
+    }
+}

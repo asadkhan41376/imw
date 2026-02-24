@@ -1,0 +1,397 @@
+.nano-process-card-item {
+    background: #1E1E1E;
+    padding: 50px;
+    margin-bottom: 28px;
+
+    @include breakpoint (max-md) {
+        padding: 40px;
+    }
+
+    @include breakpoint (max-sm) {
+        padding: 30px;
+    }
+
+    h5 {
+        color: $white;
+        margin-bottom: 100px;
+
+        @include breakpoint (max-xl) {
+           margin-bottom: 30px;
+      }
+
+    }
+
+    h3 {
+        font-size: 40px;
+        color: $white;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+		
+		@include breakpoint (max-xl) {
+			font-size: 30px;
+		}
+    }
+
+    p {
+        max-width: 716px;
+        color: $white;
+    }
+}
+
+.scrolling-wrap {
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex;
+	gap: 30px;
+    padding: 15px 0;
+
+	.comm {
+		display: flex;
+		align-items: center;
+		animation: scroll 60s linear infinite;
+		gap: 30px;
+		cursor: pointer;
+
+		.cmn-textslide {
+			font-size: 80px;
+			font-weight: 600;
+			line-height: 90px;
+			text-transform: uppercase;
+            color: $header-color;
+            font-family: $heading-font;
+            @include flex;
+            gap: 30px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: $white;
+            color: transparent;
+            @include transition;
+
+            &:hover {
+				color: $white;
+			}
+		}
+	}
+
+	&:hover {
+		.comm {
+			animation-play-state: paused;
+		}
+	}
+
+	@include breakpoint (max-xxl) {
+		.comm {
+			gap: 20px;
+		}
+	}
+
+	@include breakpoint (max-lg) {
+		gap: 14px;
+		.comm {
+			gap: 14px;
+		}
+	}
+
+	@include breakpoint (max-sm) {
+		.comm {
+			gap: 12px;
+		}
+	}
+}
+
+.nano-video-play-section {
+	position: relative;
+	height: 800px;
+    background-attachment: fixed;
+
+	@include breakpoint (max-lg) {
+		height: 600px;
+	}
+
+	@include breakpoint (max-md) {
+		height: 400px;
+	}
+
+
+	.video-btn {
+        background-color: $theme-color;
+        color: $white;
+        display: inline-block;
+        font-size: 16px;
+        height: 180px;
+        width: 180px;
+        line-height: 180px;
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+		left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 20px;
+
+		@include breakpoint (max-xl) {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+
+        @include breakpoint (max-md) {
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+        }
+    }
+}
+
+.award-wrapper-3 {
+    margin-top: 30px;
+
+    .award-image-box {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .award-main-wrapper {
+        margin-left: 60px;
+
+        @include breakpoint (max-xxxl){
+            margin-left: 20px;
+        }
+
+         @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        .award-wrap-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(51, 51, 51, 0.30);
+            padding-bottom: 40px;
+            margin-top: 40px;
+
+            @include breakpoint (max-xxl){
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            p {
+                color: $black;
+            }
+
+        .award-left-items {
+            display: flex;
+            gap: 40px;
+            flex-basis: 46%;
+
+            @include breakpoint (max-xxxl){
+               flex-basis: 48%;
+            }
+
+            @include breakpoint (max-xxl){
+                flex-basis: initial;
+            }
+
+                span {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    line-height: 45px;
+                    text-align: center;
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.guideline-wrapper-3 {
+    .guideline-box {
+        background: #1E1E1E;
+        padding: 60px 40px;
+        position: relative;
+
+        .guideline-shape-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 200px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        h3 {
+            color: $white;
+            margin-top: 40px;
+            font-size: 60px;
+
+             @include breakpoint (max-xxl){
+                font-size: 50px;
+            }
+
+             @include breakpoint (max-sm){
+                font-size: 40px;
+                margin-top: 30px;
+            }
+        }
+
+        .text-btn {
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            background: $black;
+            color: $white;
+            padding: 10px 15px;
+            margin-top: 70px;
+
+             @include breakpoint (max-lg){
+                margin-top: 20px;
+            }
+
+            &:hover {
+                color: $theme-color;
+            }
+
+            i {
+                margin-left: 5px;
+                transform: rotate(-40deg);
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+
+    .guideline-box-items {
+        background: #1E1E1E;
+        padding: 27px 50px;
+        padding-bottom: 46px;
+
+        h3 {
+            font-size: 60px;
+            font-weight: 600;
+            color: $white;
+            border-bottom: 1px solid #FFFFFF1A;
+            padding-bottom: 30px;
+
+            @include breakpoint (max-sm){
+                font-size: 40px;
+            }
+        }
+
+        .guideline-right-items {
+            display: flex;
+            justify-content: space-between;
+
+             @include breakpoint (max-xxl){
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .guideline-list-items {
+                margin-top: 30px;
+                border-right: 1px solid rgba(255, 255, 255, 0.10);
+                padding-right: 120px;
+
+                @include breakpoint (max-xxxl){
+                   padding-right: 60px;
+                }
+
+                 @include breakpoint (max-xxl){
+                    border-right: none;
+                    padding-right: 0;
+                }
+
+                h4 {
+                    color: $white;
+                }
+
+                .list-item {
+                    margin-top: 20px;
+
+                    li {
+                        font-size: 18px;
+                        color: $white;
+                        font-weight: 400;
+
+                        i {
+                            color: $theme-color;
+                            margin-right: 5px;
+                        }
+
+                     &:not(:last-child) {
+                        margin-bottom: 10px;
+
+                        }
+                    }
+                }
+            }
+
+            .guideline-Subscription-items {
+                margin-top: 30px;
+                max-width: 490px;
+
+
+                h4 {
+                    color: $white;
+                    margin-bottom: 20px;
+                }
+
+                 .form {
+                    .single-select {
+                        padding: 19px 20px;
+                        border: none;
+                        font-size: 16px;
+                        font-weight: 400;
+                        outline: none;
+                        line-height: 1;
+                        height: initial;
+                        border: none;
+                        background: #000;
+                        color: $white;
+                        border-radius: 0;
+
+                        &::after {
+                            right: 20px;
+                            border-bottom: 2px solid #fff;
+                            border-right: 2px solid #fff;
+                            margin-top: -5px;
+                            width: 8px;
+                            height: 8px;
+                        }
+
+                        .option {
+                            color: $header-color;
+                        }
+                    }
+
+                    .list {
+                        width: 100%;
+                    }
+                }
+
+                h5 {
+                    color: $white;
+                    font-size: 80px;
+                   font-weight: 600;
+                   display: inline-block;
+                   margin-top: 25px;
+                   margin-bottom: 20px;
+
+                   sub {
+                    font-size: 28px;
+                    margin-top: -5px;
+                    margin-left: -6px;
+                   }
+                }
+            }
+        }
+    }
+}

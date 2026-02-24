@@ -1,0 +1,287 @@
+.nano-faq-wrapper {
+
+    .nano-faq-content {
+
+        .nano-faq-text {
+            max-width: 652px;
+            margin-top: 30px;
+        }
+
+        .nano-faq-button {
+            margin-top: 50px;
+        }
+    }
+
+  .nano-faq-item {
+      .accordion-item {
+        background: #1E1E1E;
+        border: none;
+
+      .accordion-header {
+          position: relative;
+          background: #1E1E1E;
+          color: $white;
+
+        .accordion-button {
+            font-size: 24px;
+            font-weight: 600;
+            color: $white;
+            background: #1E1E1E;
+            padding: 30px 24px;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            text-align: left;
+            width: 100%;
+
+            @include breakpoint(max-xl) {
+              font-size: 18px;
+            }
+
+            &::after {
+              display: none; 
+            }
+
+            &.collapsed {
+              background: #1E1E1E;
+            }
+        }
+
+          .faq-toggle-icon {
+              position: absolute;
+              right: -57px;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              background: $white;
+              color: $header-color;
+              font-family: $fa;
+              font-weight: 900;
+              font-size: 18px;
+              text-align: center;
+              line-height: 48px;
+              transition: all 0.3s ease;
+              pointer-events: none;
+
+              @include breakpoint (max-xl) {
+                display: none;
+            }
+
+              &::before {
+                content: "\2b"; 
+                display: block;
+              }
+          }
+
+          .accordion-button:not(.collapsed) + .faq-toggle-icon {
+            background: #6B5AED;
+            color: #fff;
+
+            &::before {
+              content: "\f00d"; 
+              font-family: $fa;
+            }
+          }
+        }
+
+      .accordion-collapse {
+          .accordion-body {
+              padding: 0 24px 20px 24px;
+              color: $white;
+              font-size: 18px;
+              font-weight: 400;
+              background: #1E1E1E;
+
+              @include breakpoint(max-lg) {
+                padding-right: 30px;
+              }
+          }
+       }
+    }
+  }
+
+  &.nano-style-2 {
+
+     .nano-faq-item {
+      .accordion-item {
+        background: $bg-color;
+        border: none;
+
+      .accordion-header {
+          position: relative;
+          background: $bg-color;
+          color: $white;
+
+        .accordion-button {
+            color: $header-color;
+            background: $bg-color;
+
+            &::after {
+              display: none; 
+            }
+
+            &.collapsed {
+              background: $bg-color;
+            }
+        }
+
+          .faq-toggle-icon {
+              background: $header-color;
+              color: $white;
+
+              &::before {
+                content: "\2b"; 
+                display: block;
+              }
+          }
+
+          .accordion-button:not(.collapsed) + .faq-toggle-icon {
+            background: #6B5AED;
+            color: #fff;
+
+            &::before {
+              content: "\f00d"; 
+              font-family: $fa;
+            }
+          }
+        }
+
+      .accordion-collapse {
+          .accordion-body {
+              color: #333;
+              background: $bg-color;
+          }
+        }
+     }
+   }
+  }
+}
+
+.education-experience-wrapper {
+    .faq-content {
+        margin-left: 100px;
+
+        @include breakpoint (max-xxxl){
+          margin-left: 40px;
+        }
+
+         @include breakpoint (max-xxl){
+          margin-left: 0;
+        }
+
+        // .accordion-collapse {
+        //     border-top: 2px solid transparent;
+        //     // border-image: $color-gradient-1;
+        //     border-top: 2px solid transparent;
+        //     border-image-slice: 2;
+        // }
+
+        .accordion-item {
+            border:none;
+              padding: 12px 25px;
+            border-radius: 0;
+            background: #202020;
+
+            .accordion-header { 
+
+                .accordion-button { 
+                    font-weight:600;
+                    color:$theme-color;
+                    background: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    box-shadow: none;
+                    padding: 15px 15px;
+                    text-transform: uppercase;
+                    font-size:24px;
+                    line-height:125%; 
+                    letter-spacing: -0.48px;
+
+
+                    &::after {
+                        content: "\2b";
+                        background: transparent;
+                        font-family: $fa;
+                        font-weight: 500;
+                        transition: all 0.3s ease-in-out !important;
+                        color: $theme-color;
+                    }
+
+                    &:not(.collapsed)::after {
+                        content: "\f00d";
+                        font-family: $fa;
+                        background: transparent;
+                        font-weight: 500;
+                        color: $white;
+                    }
+                  
+                }
+
+                .accordion-button:not(.collapsed) {
+                  color:$bg-color;
+                  background-color:none;
+                  background-color:transparent;
+                  box-shadow:transparent;
+
+              }
+
+            }
+      
+            .accordion-collapse { 
+
+                .accordion-body {
+                    padding-right: 30px;
+                    padding-top: 25px;
+                    color:$text-color;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height:162.5%;
+                    display: flex;
+                    gap: 80px;
+                    border-top: 1px solid rgba(255, 255, 255, 0.20);
+                    color: $white;
+
+                    @include breakpoint (max-xl){
+                      gap: 30px;
+                    }
+
+                    @include breakpoint (max-sm){
+                      flex-wrap: wrap;
+                    }
+
+                    .date {
+                        flex-basis: 115px;
+
+                        li {
+                            font-size: 20px;
+                            font-weight: 400;
+                            color: $white;
+                        }
+
+                    }
+                    .content {
+                        h4 {
+                            color: $white;
+                            margin-bottom: 8px;
+                            font-size: 24px;
+                            font-style: normal;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

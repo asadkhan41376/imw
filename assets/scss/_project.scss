@@ -1,0 +1,369 @@
+.nano-project-item {
+
+    .nano-project-image {
+        position: relative;
+        max-width: 788px;
+        overflow: hidden;
+
+        @include breakpoint (max-xl) {
+           max-width: initial;
+        }
+
+        img {
+            @include imgw;
+        }
+
+        &.style-2 {
+            max-width: 680px;
+
+             @include breakpoint (max-xl) {
+               max-width: initial;
+            }
+        }
+
+        h2 {
+            position: absolute;
+            font-size: 38px;
+            top: -100px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+            visibility: hidden;
+            @include transition;
+
+             @include breakpoint (max-xl) {
+               left: 20px;
+            }
+
+             @include breakpoint (max-lg) {
+               letter-spacing: 0;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        .video {
+            position: relative;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @include transition;
+            width: 174px;
+            height: 174px;
+            line-height: 174px;
+            text-align: center;
+            border-radius: 100%;
+            z-index: 999;
+            border: 1px solid $white;
+
+            @include breakpoint (max-md){
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                font-size: 18px;
+            }
+
+            .video-btn {
+                text-align: center;
+                width: 83px;
+                height: 83px;
+                line-height: 83px;
+                background-color: $white;
+                color: $header-color;
+                display: inline-block;
+                text-align: center;
+                font-size: 24px;
+                z-index: 999;
+                position: absolute;
+                z-index: 99;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 100%;
+
+                i {
+                    z-index: 99;
+                    position: relative;
+                }
+
+            }
+
+            .circle-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+
+                img {
+                    animation: cir36 10s linear infinite;
+                    width: initial;
+                    height: initial;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .nano-project-image {
+            h2 {
+                top: 50%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &.style-2 {
+        margin-left: 100px;
+        margin-top: 200px;
+
+         @include breakpoint (max-xl) {
+           margin-top: 0;
+           margin-left: 0;
+        }
+
+        .nano-project-image {
+            max-width: 680px;
+
+             @include breakpoint (max-xl) {
+               max-width: initial;
+            }
+        }
+    }
+
+    &.style-3 {
+       margin-top: 100px;
+
+        @include breakpoint (max-xl) {
+          margin-top: 0;
+      }
+   }
+}
+
+.nano-project-section {
+    .text {
+        text-align: center;
+        font-size: 200px;
+        margin-top: -25px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        line-height: 1;
+
+        @include breakpoint (max-xl) {
+            font-size: 90px;
+            margin-top: 0;
+        }
+
+        @include breakpoint (max-lg) {
+            font-size: 70px;
+        }
+
+        @include breakpoint (max-md) {
+            font-size: 50px;
+        }
+
+        @include breakpoint (max-sm) {
+            font-size: 40px;
+        }
+    }
+}
+.nano-project-details-wrapper {
+
+    .nano-project-details-items {
+        position: relative;
+        margin-bottom: 60px;
+
+        .array-buttons {
+
+            .array-prev {
+                position: absolute;
+                top: 50%;
+                left: 80px;
+                z-index: 9;
+                transform: translateY(-50%);
+            }
+
+            .array-next {
+                position: absolute;
+                top: 50%;
+                right: 80px;
+                z-index: 9;
+                transform: translateY(-50%);
+            }
+
+            @include breakpoint (max-lg) {
+                display: none;
+            }
+        }
+
+        .nano-project-details-image {
+            img {
+                @include imgw;
+            }
+        }
+    }
+
+    .nano-project-details-content {
+        h3 {
+            font-size: 50px;
+            margin-bottom: 15px;
+            margin-top: 30px;
+
+            @include breakpoint (max-xl) {
+                font-size: 25px;
+            }
+        }
+
+        .nano-preview-area {
+            @include flex;
+            justify-content: space-between;
+            margin-top: 100px;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 50px;
+            }
+
+            .nano-preview-item {
+                a {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $header-color;
+                    border-bottom: 2px solid $header-color;
+                    display: inline-block;
+
+                    i {
+                        margin-right: 5px;
+                        transform: rotate(-135deg);
+                    }
+                }
+
+                &.style-2 {
+                    a {
+                        i {
+                            margin-left: 5px;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nano-project-catagory {
+        padding: 30px 30px;
+        background-color: $bg-color;
+        
+        ul {
+            li {
+                font-weight: 500;
+                font-size: 20px;
+                color: $header-color;
+                @include flex;
+                justify-content: space-between;
+                padding: 16px 0;
+
+                span {
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .socal-icon {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 40px;
+        
+        a {
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+            border-radius: 30px;
+            background: $header-color;
+            display: inline-block;
+            text-align: center;
+            color: $white;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.nano-project-image-items-3 {
+    margin-top: 30px;
+    position: relative;
+
+    .nano-project-image {
+        position: relative;
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: "";
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .poject-content {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            right: 30px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+           span {
+                font-size: 20px;
+                font-weight: 400;
+                color: $white;
+           } 
+
+           h3 {
+            
+            a {
+                color: $white;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+           }
+        }
+
+        &:hover {
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            .poject-content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+}

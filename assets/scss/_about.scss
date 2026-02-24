@@ -1,0 +1,120 @@
+.nano-about-wrapper {
+
+    .nano-about-content {
+
+        .text {
+            margin-top: 25px;
+            max-width: 680px;
+
+             @include breakpoint (max-xl) {
+                  font-size: 16px;
+            }
+        }
+
+        .nano-about-button {
+            margin-top: 50px;
+
+             @include breakpoint (max-xl) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .nano-about-item {
+
+        .nano-about-image {
+            margin-bottom: 60px;
+
+            @include breakpoint (max-xl) {
+                margin-bottom: 30px;
+            }
+
+            img {
+                @include imgw;
+            }
+        }
+
+        .nano-count-item {
+            @include flex;
+            justify-content: space-between;
+
+            @include breakpoint (max-lg) {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .nano-count {
+
+                h2 {
+                    @include breakpoint (max-lg) {
+                        font-size: 40px;
+                    }
+                }
+
+                p {
+                    max-width: 278px;
+                    margin-top: 5px;
+
+                    @include breakpoint (max-xl) {
+                        font-size: 16px;
+                    }
+                }
+
+                &.style-2 {
+                    border-right: 1px solid #333;
+                    padding-right: 110px;
+
+                    @include breakpoint (max-xxxl) {
+                        border-right: none;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nano-about-box-items-3 {
+
+    .nano-count-item {
+            @include flex;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            @include breakpoint (max-xl){
+                margin-top: 30px;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+        .nano-count {
+            border-right: 1px solid #333;
+            padding-right: 110px;
+
+             @include breakpoint (max-xl){
+               padding-right: 0;
+               border-right: none;
+            }
+
+            h2 {
+                font-size: 80px;
+
+                @include breakpoint (max-sm){
+                    font-size: 50px;
+                }
+            }
+
+            p {
+                max-width: 278px;
+                margin-top: 5px;
+                font-size: 18px;
+            }
+
+            &.border-none {
+                border-right: none;
+                padding-right: 0;
+            }
+
+        }
+    }
+}

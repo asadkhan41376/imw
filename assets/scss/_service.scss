@@ -1,0 +1,655 @@
+.nano-service-wrapper {
+    @include transition;
+    padding: 60px 0;
+    position: relative;
+
+    @include breakpoint (max-xxl){
+       padding: 30px 0;
+    }
+
+    @include breakpoint (max-xxl){
+       padding: 30px 0;
+    }
+
+     @include breakpoint (max-sm){
+       margin-top: 30px;
+    }
+
+    .service-image {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16%;
+        max-width: 340px;
+        opacity: 0;
+        visibility: visible;
+        @include transition;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+
+    .nano-service-item {
+        @include flex;
+        gap: 50px;
+        position: relative;
+
+        .service-content-item {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 86%;
+                left: 134px;
+                top: 25px;
+                height: 1px;
+                background: rgba(84, 84, 84, 0.50);
+
+                @include breakpoint (max-xl){
+                    display: none;
+                }
+            }
+
+            .service-content {
+                h6 {
+                    font-size: 18px;
+                    padding: 16px 24px;
+                    border-radius: 30px;
+                    border: 1px solid $header-color;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    line-height: 1;
+                }
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .arrow-icon {
+                font-size: 32px;
+
+                i {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        background-color: #1E1E1E;
+
+         .number {
+            color: $white;
+        }
+
+        .service-image {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nano-service-item {
+            
+            .service-content-item {
+                &::before {
+                    background: rgba(255, 255, 255, 0.30);
+                }
+
+                .service-content {
+                    h6 {
+                        color: $white;
+                        border-radius: 30px;
+                        border: 1px solid rgba(255, 255, 255, 0.60);
+                    }
+
+                    h3 {
+                        a {
+                            color: $white;
+                        }
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+
+                .arrow-icon {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+     &.active {
+        background-color: #1E1E1E;
+
+         .number {
+            color: $white;
+        }
+
+        .service-image {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nano-service-item {
+            
+            .service-content-item {
+                &::before {
+                    background: rgba(255, 255, 255, 0.30);
+                }
+
+                .service-content {
+                    h6 {
+                        color: $white;
+                        border-radius: 30px;
+                        border: 1px solid rgba(255, 255, 255, 0.60);
+                    }
+
+                    h3 {
+                        a {
+                            color: $white;
+                        }
+                    }
+
+                    p {
+                        color: $white;
+                    }
+                }
+
+                .arrow-icon {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.nano-service-wrapper-2 {
+    @include breakpoint (max-sm) {
+        margin-top: 30px;
+    }
+
+    .nano-service-main-item {
+        position: relative;
+        border-top: 1px solid rgba(51, 51, 51, 0.50);
+        border-bottom: 1px solid rgba(51, 51, 51, 0.50);
+
+        &:not(:first-child) {
+        border-top: none;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            content: "";
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover;
+            background: url("../../assets/img/home-2/service/service-1.jpg");
+            @include transition;
+            z-index: -1;
+            
+            @include breakpoint(max-lg){
+                display: none;
+            }
+        }
+
+    .nano-service-item {
+        @include flex;
+        justify-content: space-between;
+        padding: 50px 50px;
+
+        @include breakpoint (max-xxl) {
+            padding: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+         }
+
+        @include breakpoint (max-sm) {
+            padding: 30px;
+         }
+
+        .nano-service-left-content {
+            @include flex;
+            gap: 60px;
+
+            @include breakpoint (max-xxl) {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .nano-service-content {
+                h6 {
+                    font-size: 18px;
+                    padding: 14px 24px;
+                    border-radius: 30px;
+                    border: 1px solid $header-color;
+                    background:transparent;
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    line-height: 1;
+
+                    @include breakpoint (max-xl) {
+                       padding: 10px 24px;
+                    }
+
+                }
+
+                h3 {
+                    margin-bottom: 10px;
+
+                    @include breakpoint (max-xxxl){
+                        font-size: 24px;
+                    }
+
+                }
+            }
+        }
+
+        .nano-service-left-content {
+            @include flex;
+            gap: 100px;
+
+            @include breakpoint (max-xl) {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            p {
+                max-width: 544px;
+
+              @include breakpoint (max-xl) {
+                   font-size: 16px;
+              }
+            }
+
+            .nano-arrow-icon {
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+                text-align: center;
+                border: 1px solid $header-color;
+                border-radius: 100%;
+
+                @include breakpoint (max-xl) {
+                    width: 60px;
+                    line-height: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+    &:hover {
+         &::before {
+            width: 100%;
+            z-index: 1;
+        }
+
+        .nano-service-item {
+            position: relative;
+            z-index: 999;
+
+            .nano-service-left-content {
+
+                 .number {
+                        color: $white;
+
+                        @include breakpoint (max-lg){
+                            color: $header-color;
+                        }
+                 }
+
+                .nano-service-content {
+
+                    h6 {
+                        border: 1px solid $white;
+                        background: transparent;
+                        color: $white;
+
+                         @include breakpoint (max-lg){
+                            color: $header-color;
+                        }
+                    }
+
+                    h3 {
+                        a {
+                            color: $white;
+
+                             @include breakpoint (max-lg){
+                            color: $header-color;
+                        }
+                        }
+                    }
+                }
+            }
+
+            .nano-service-left-content {
+            
+                p {
+                  color: $white;
+
+                   @include breakpoint (max-lg){
+                            color: $text-color;
+                    }
+                }
+
+                .nano-arrow-icon {
+                    border: 1px solid $white;
+                    color: $white;
+
+                     @include breakpoint (max-lg){
+                        color: $header-color;
+                        border: 1px solid $header-color;
+                    }
+                }
+            }
+        }
+    }
+
+    }
+}
+
+.nano-service-cards-items-3 {
+    background: #1E1E1E;
+    margin-top: 30px;
+    border-left: 1px solid rgba(255, 255, 255, 0.20);
+
+    .nano-content {
+         padding: 28px;
+
+        .nano-icon {
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            margin-bottom: 15px;
+            a {
+                color: $white;
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+
+        p {
+            color: $white;
+        }
+
+        .text-btn {
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: underline;
+            color: $white;
+
+            &:hover {
+                color: $theme-color;
+            }
+
+            i {
+                margin-left: 5px;
+                transform: rotate(-40deg);
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+
+    .nano-image {
+        opacity: 0;
+        visibility: visible;
+        @include transition;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.active {
+         .nano-image {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &:hover {
+        .nano-image {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.style-2 {
+        background: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.20);
+        background: var(--White, #FFF);
+
+        .nano-content {
+            h4 {
+                margin-top: 60px;
+                a {
+                    color: $black;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            p {
+                color: $black;
+            }
+
+            .text-btn {
+                color: $black;
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.nano-service-section-4 {
+    background: #F8F8F8;
+}
+
+.nano-service-details-wrapper {
+    .nano-details-left-items {
+        .service-image {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .service-content {
+            h2 {
+                font-size: 60px;
+                font-weight: 600;
+                margin-top: 30px;
+
+                @include breakpoint (max-md){
+                    font-size: 50px;
+                }
+                 @include breakpoint (max-sm){
+                    font-size: 40px;
+                }
+            }
+
+            h3 {
+                font-size: 50px;
+                font-weight: 600;
+                margin-top: 30px;
+
+                 @include breakpoint (max-sm){
+                    font-size: 30px;
+                }
+            }
+
+            .nano-faq-item {
+            .accordion-item {
+                background: #F8F8F8;
+                border: none;
+
+            .accordion-header {
+                position: relative;
+                background: #F8F8F8;
+
+                .accordion-button {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: $black;
+                    background: #F8F8F8;
+                    padding: 30px 24px;
+                    border: none;
+                    border-radius: 0;
+                    box-shadow: none;
+                    text-align: left;
+                    width: 100%;
+
+                    &::after {
+                    display: none; 
+                    }
+
+                    &.collapsed {
+                    background: #F8F8F8;
+                    }
+                }
+
+                .faq-toggle-icon {
+                    position: absolute;
+                    right: -57px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background: $header-color;
+                    color: $white;
+                    font-family: $fa;
+                    font-weight: 900;
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 48px;
+                    transition: all 0.3s ease;
+                    pointer-events: none;
+
+                    @include breakpoint (max-xl) {
+                        display: none;
+                    }
+
+                    &::before {
+                        content: "\2b"; 
+                        display: block;
+                    }
+                }
+
+                .accordion-button:not(.collapsed) + .faq-toggle-icon {
+                    background: #6B5AED;
+                    color: #fff;
+
+                    &::before {
+                    content: "\f00d"; 
+                    font-family: $fa;
+                    }
+                }
+                }
+
+            .accordion-collapse {
+                .accordion-body {
+                    padding: 0 24px 20px 24px;
+                    color: $black;
+                    font-size: 18px;
+                    font-weight: 400;
+                    background: #F8F8F8;
+
+                    @include breakpoint(max-lg) {
+                        padding-right: 30px;
+                    }
+                }
+            }
+            }
+            }
+
+        }
+    }
+
+    .nano-service-details-sidebar {
+       
+        .sidebar-widget {
+             padding: 40px 35px;
+             background: #F8F8F8;
+             margin-bottom: 30px;
+
+             .sideber-title {
+                margin-bottom: 25px;
+             }
+
+            ul {
+                li {
+                    a {
+                        font-size: 18px;
+                         border: 1px solid rgba(51, 51, 51, 0.20);
+                        background: $white;
+                        padding: 15px 20px;
+                        width: 100%;
+                        display: inline-flex;
+                        justify-content: space-between;
+
+                        &:hover {
+                            background: $theme-color;
+                            color: $white;
+                        }
+
+                        .icon {
+                            margin-left: 5px;
+                            transform: rotate(-40deg);
+                            transition: all 0.4s ease-in-out;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+
+            .contact-info {
+                li {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    margin-top: 30px;
+
+                    .icon {
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px;
+                        border-radius: 50%;
+                        text-align: center;
+                        background-color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

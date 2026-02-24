@@ -1,0 +1,222 @@
+.nano-testimobial-item {
+    text-align: center;
+    position: relative;
+
+    .left-number {
+        @include flex;
+        gap: 40px;
+        position: absolute;
+        top: 75px;
+        left: 280px;
+    
+        @include breakpoint (max-xl) {
+          display: none;
+        }
+
+        .number {
+            color: rgba(0, 0, 0, 0.50);
+        }
+    }
+
+     .right-number {
+        @include flex;
+        gap: 40px;
+        position: absolute;
+        top: 75px;
+        right: 260px;
+    
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+
+        .number {
+            color: rgba(0, 0, 0, 0.50);
+        }
+    }
+
+    .nano-testimonial-content {
+        text-align: center;
+
+        .client-image {
+            margin-bottom: 60px;
+        }
+        p {
+            max-width: 1116px;
+            font-size: 36px;
+            color: #333;
+            line-height: 133%;
+            font-weight: 400;
+            text-align: center;
+            margin:  0 auto;
+
+            @include breakpoint (max-xl) {
+                font-size: 20px;
+            }
+
+            @include breakpoint (max-sm) {
+                font-size: 16px;
+            }
+        }
+
+        h3 {
+            font-size: 40px;
+            margin-top: 40px;
+
+            @include breakpoint (max-xl) {
+                margin-top: 30px;
+                font-size: 25px;
+            }
+        }
+
+        span {
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.nano-testimonial-wrapper-2 {
+    margin-top: 60px;
+    position: relative;
+
+    @include breakpoint (max-md){
+        margin-top: 30px;
+    }
+
+    .array-items {
+        display: grid;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        &::before {
+            position: absolute;
+            top: 46px;
+            bottom: 0;
+            left: 7px;
+            height: 74%;
+            width: 1px;
+            background-color: #000;
+            content: "";
+
+            @include breakpoint (max-xxl){
+                display: none;
+            }
+        }
+
+        .array-prev {
+            position: absolute;
+            top: 22px;
+            left: 0;
+        }
+
+        .array-next {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
+        }
+    }
+
+    .nano-client-image-slider .swiper-slide .client-img img {
+        border: 0;
+        transition: border 0.3s ease;
+    }
+
+    .nano-client-image-slider .swiper-slide.swiper-slide-active .client-img img {
+        border: 2px solid #000; /* Replace with your preferred border color */
+        border-radius: 50%; /* Optional: makes the border rounded */
+        transition: border 0.3s ease;
+    }
+
+
+    .nano-testimonial-content-slider {
+        height: 480px;
+
+        @include breakpoint (max-xl){
+            height: 388px;
+        }
+    }
+
+    .nano-testimonial-box-2 {
+        padding: 40px;
+        background-color: $white;
+
+        p {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            color: #333;
+            line-height: 134%;
+            letter-spacing: -0.36px;
+
+            @include breakpoint (max-xxl){
+                font-size: 27px;
+            }
+
+            @include breakpoint (max-xl){
+                font-size: 24px;
+            }
+
+             @include breakpoint (max-lg){
+                font-size: 22px;
+            }
+
+            @include breakpoint (max-md){
+                font-size: 18px;
+            }
+        }
+
+        .nano-client-info {
+            margin-top: 35px;
+
+            h3 {
+                font-size: 28px;
+
+                  @include breakpoint (max-md){
+                    font-size: 20px;
+                }
+            }
+
+            span {
+                font-size: 18px;
+                color: #333;
+            }
+        }
+    }
+
+    .nano-client-items {
+        text-align: right;
+
+        .nano-client-image-slider {
+             height: 480px;
+
+              @include breakpoint (max-md){
+                height: 115px;
+            }
+        }
+    }
+}
+
+.nano-testimonial-box-items-3 {
+    margin-top: 30px;
+    background: #F8F8F8;
+    padding: 45px;
+
+    @include breakpoint (max-xxl){
+        padding: 30px;
+    }
+
+    .nano-client-info {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        @include breakpoint (max-xl){
+           flex-wrap: wrap;
+        }
+    }
+
+    .star {
+        color: #FFB300;
+    }
+}

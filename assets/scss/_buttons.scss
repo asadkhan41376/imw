@@ -1,0 +1,101 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 30px;
+    background: $theme-color;
+    font-family: Instrument Sans;
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 16px 20px;
+    letter-spacing: -0.18px;
+
+    i {
+        margin-left: 5px;
+        transform: rotate(-40deg);
+        @include transition;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-color: $header-color;
+        z-index: -1;
+        transition: all 0.4s ease-out;
+        border-radius: inherit;
+    }
+
+    &:hover {
+        color: $white;
+        box-shadow: none;
+
+        i {
+            transform: rotate(0);
+        }
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+
+    @include breakpoint (max-md){
+        padding: 20px 32px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 18px 30px;
+        font-size: 14px;
+    }
+}
+
+.nano-link-btn {
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    font-family: "Instrument Sans", sans-serif;
+    text-transform: capitalize;
+    color: $header-color;
+    border-bottom: 1px solid $header-color;
+
+    i {
+        transform: rotate(-40deg);
+        @include transition;
+        font-weight: 400;
+        margin-left: 8px;
+    }
+
+    &.nano-style-2 {
+        color: $white;
+        
+        a {
+
+            &:hover {
+                color: $theme-color !important;
+            }
+        }
+    }
+
+    &:hover {
+        color: $theme-color;
+        border-bottom: 1px solid $theme-color;
+
+        i {
+            transform: rotate(0);
+        }
+    }
+}
+
+//>>>>> Component Button End <<<<<//
