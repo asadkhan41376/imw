@@ -7616,3 +7616,28 @@ span {
  background-color: var(--theme) !important;
   color: white !important;
 }
+
+
+
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.service-tabs .tab-btn {
+  border: 1px solid #ddd;
+  background: transparent;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.service-tabs .tab-btn.active,
+.service-tabs .tab-btn:hover {
+  background: #5f5fff;
+  color: #fff;
+  border-color: #5f5fff;
+}

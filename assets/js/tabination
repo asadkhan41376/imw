@@ -1,0 +1,27 @@
+
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const serviceRows = document.querySelectorAll(".service-content");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tab = button.dataset.tab.toLowerCase();
+
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      serviceRows.forEach((row) => {
+        const category = row.dataset.category.toLowerCase();
+
+        if (category === tab) {
+          row.style.display = "flex";
+        } else {
+          row.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // default first tab visible
+  serviceRows.forEach((row, index) => {
+    row.style.display = index === 0 ? "flex" : "none";
+  });
