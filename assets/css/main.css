@@ -2631,9 +2631,10 @@ span {
 }
 .header-main .main-menu ul li a {
   display: inline-block;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.34px;
+  line-height: 1.4;
   color: var(--white);
   font-family: 'Poppins', sans-serif;
   padding: 20px 0;
@@ -7320,10 +7321,10 @@ span {
   top: 105%;
   inset-inline-start: 0;
   /* min-width: 100%; */
-  min-width: 60%;
-  left: 10%;
-  min-height: 50vh;
-  padding: 20px 0;
+  min-width: 100%;
+  left: 2%;
+  /* min-height: auto; */
+  padding: 80px 0;
   z-index: 99999;
   visibility: hidden;
   opacity: 0;
@@ -7654,4 +7655,9 @@ span {
   background: var(--theme);
   color: #fff;
   border-color: var(--theme);
+}
+
+
+.content h5, p {
+  font-size: 18px;
 }
